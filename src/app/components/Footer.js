@@ -1,41 +1,40 @@
-import React from 'react'; 
-import './Footer.css';
-
-
-import fondoFooter from '../assets/fondo-footer.jpg';
+import React from 'react';
+import '../styles/Footer.css'
+import Image from 'next/image';
 import logoVlock from '../assets/logo-vlock.png';
 
 function Footer() {
   return (
     <footer className="footer-container">
-      
+
       <div className="footer-content">
-        
+
         <div className="footer-left">
-          <img 
-            src={logoVlock} 
-            alt="VLOCK Constructora" 
-            className="footer-logo" 
+          <Image
+            src={logoVlock}
+            alt="VLOCK Constructora"
+            className="footer-logo"
+            priority
           />
         </div>
 
-        
+
         <div className="footer-center">
           <h3>Nuestra ubicación</h3>
           <p><strong>Calle 12 # 3 - 45, Bogotá, Colombia <br /> (Estacionamiento para personas con discapacidad disponible)</strong></p>
 
         </div>
 
-        
+
         <div className="footer-right">
           <h3>Horario de oficina</h3>
           <p><strong>De lunes a viernes <br />
-          9:00 a.m. a 5:00 p.m.</strong></p>
-          
+            9:00 a.m. a 5:00 p.m.</strong></p>
+
         </div>
       </div>
 
-      
+
       <div className="footer-bottom">
         {/* Sección legal */}
         <div className="footer-legal">

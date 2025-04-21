@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Error404.css";
+import '../styles/Error404.css'
 import { FaHardHat, FaHome } from "react-icons/fa";
 
 const Error404 = () => {
