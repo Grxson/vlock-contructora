@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
 
         {children}
         {/*<Proyectos />*/}
-        <WhatsappButton />
+        <Proyectos />
         <Footer />
       </body>
     </html>
