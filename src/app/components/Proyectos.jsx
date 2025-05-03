@@ -11,35 +11,35 @@ function App() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   const projects = [
-    { 
-      img: '/assets/Plaza Piramide.jpg', 
+    {
+      img: '/assets/Plaza Piramide.jpg',
       fullImg: '/assets/ProyectsImageFull/PlazaPiramide.jpg',
-      caption: 'PLAZA PIRÁMIDE: DESARROLLO Y CONSTRUCCIÓN' 
+      caption: 'PLAZA PIRÁMIDE: DESARROLLO Y CONSTRUCCIÓN'
     },
-    { 
-      img: '/assets/Torre Country.jpg', 
+    {
+      img: '/assets/Torre Country.jpg',
       fullImg: '/assets/ProyectsImageFull/Torre Country.jpg',
-      caption: 'TORRE DE DEPARTAMENTOS COUNTRY CLUB MUROS' 
+      caption: 'TORRE DE DEPARTAMENTOS COUNTRY CLUB MUROS'
     },
-    { 
-      img: '/assets/Aeropuerto.jpg', 
+    {
+      img: '/assets/Aeropuerto.jpg',
       fullImg: '/assets/ProyectsImageFull/Aeropuerto.jpg',
-      caption: 'AEROPUERTO DE GUADALAJARA: REMODELACIÓN DE SALAS DE ESPERA' 
+      caption: 'AEROPUERTO DE GUADALAJARA: REMODELACIÓN DE SALAS DE ESPERA'
     },
-    { 
-      img: '/assets/NextiPark.jpg', 
+    {
+      img: '/assets/NextiPark.jpg',
       fullImg: '/assets/ProyectsImageFull/NextiPark.jpg',
-      caption: 'PRELIMINARES NEXTIPARK' 
+      caption: 'PRELIMINARES NEXTIPARK'
     },
-    { 
-      img: '/assets/Tequilera.jpg', 
+    {
+      img: '/assets/Tequilera.jpg',
       fullImg: '/assets/ProyectsImageFull/Tequilera.jpg',
-      caption: 'TEQUILERA DON JULIO' 
+      caption: 'TEQUILERA DON JULIO'
     },
-    { 
-      img: '/assets/Hersheys.jpg', 
+    {
+      img: '/assets/Hersheys.jpg',
       fullImg: '/assets/ProyectsImageFull/Hersheys.jpg',
-      caption: 'MUROS PERIMETRALES PARA HERSHEY´S' 
+      caption: 'MUROS PERIMETRALES PARA HERSHEY´S'
     }
   ];
 
@@ -67,8 +67,8 @@ function App() {
       <div className="carousel-container">
         <button className="carousel-btn" onClick={() => moveSlide(-1)}>&lt;</button>
         <div className="carousel-wrapper">
-          <div 
-            className="carousel" 
+          <div
+            className="carousel"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {projects.map((project, index) => (
@@ -78,7 +78,14 @@ function App() {
                 onClick={() => openImage(project.fullImg || project.img)}
               >
                 <div className="carousel-item-inner">
-                  <img src={project.img} alt={`Proyecto ${index + 1}`} />
+                  <Image
+                    src={project.img}
+                    alt={`Proyecto ${index + 1}`}
+                    width={400}
+                    height={300}
+                    style={{ objectFit: 'cover', borderRadius: '8px' }}
+                  />
+
                   <div className="carousel-caption">{project.caption}</div>
                 </div>
               </div>
@@ -91,7 +98,14 @@ function App() {
       {selectedImage && (
         <div className="overlay" onClick={closeImage}>
           <div className="overlay-content">
-            <img src={selectedImage} alt="Imagen Ampliada" />
+            <Image
+              src={selectedImage}
+              alt="Imagen Ampliada"
+              width={1000}
+              height={700}
+              style={{ objectFit: 'contain', borderRadius: '8px' }}
+            />
+
           </div>
         </div>
       )}
