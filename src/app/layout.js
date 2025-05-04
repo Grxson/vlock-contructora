@@ -12,13 +12,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body style={{ margin: 0, padding: 0 }}>
+        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+          {children}
+          {/*<Proyectos />*/}
+          <Proyectos />
 
-        {children}
-        {/*<Proyectos />*/}
-        <Proyectos />
+        </div>
+        <WhatsappButton />
         <Footer />
       </body>
+
     </html>
   );
 }
