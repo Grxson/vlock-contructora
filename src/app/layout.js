@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
 import Navbar from "./components/Navbar";
 import Carousel from "./components/Carousel";
 import Proyectos from "./components/Proyectos";
@@ -13,13 +14,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
-      <body>
+    <html lang="en">
+      <body style={{ margin: 0, padding: 0 }}>
         <Navbar />
         <Carousel />
         {children}
         {/*<Proyectos />*/}
         <Proyectos />
+        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}></div>
+        <WhatsappButton />
         <Footer />
       </body>
     </html>
