@@ -51,7 +51,7 @@ export default function Navbar() {
             <div className="top-bar">
                 <div className="contact-info">
                     <span><i className="fa-solid fa-phone"></i> +52 1 55 7366 4910</span> |
-                    <span><i className="fa-solid fa-envelope"></i>administrador@servicioswebicono.com</span>
+                    <span><i className="fa-solid fa-envelope"></i>administrador@correo.com</span>
                 </div>
                 <div className="social-icons">
                     <a href="#" target="_blank"><i className="fa-brands fa-facebook-f"></i></a>
