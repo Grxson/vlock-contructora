@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "./components/Footer";
 import WhatsappButton from "./components/WhatsappButton";
 import Proyectos from "./components/Proyectos";
+import Navbar from "./components/Navbar";
 
 export const metadata = {
   title: 'Vlock Constructora',
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body style={{ margin: 0, padding: 0 }}>
+        <Navbar />
         <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
           {children}
           {/*<Proyectos />*/}
