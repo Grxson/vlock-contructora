@@ -1,8 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "./components/Footer";
-import WhatsappButton from "./components/WhatsappButton";
+import Navbar from "./components/Navbar";
 import Proyectos from "./components/Proyectos";
+import WhatsappButton from "./components/WhatsappButton";
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: 'Vlock Constructora',
@@ -11,9 +12,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body>
-
+        <Navbar />
         {children}
         {/*<Proyectos />*/}
         <Proyectos />
