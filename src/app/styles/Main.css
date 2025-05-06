@@ -1,0 +1,143 @@
+.main-section {
+  padding: 4rem 0;
+  margin: 1rem 0;
+}
+
+.main-container {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .main-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .text-section {
+    text-align: left;
+  }
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .image-grid {
+    width: 50%;
+  }
+
+  .text-section {
+    width: 50%;
+  }
+}
+
+.image-box {
+  position: relative;
+  height: 35rem;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-box:hover img {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease;
+}
+
+.image-box:hover .image-overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.text-section {
+  text-align: center;
+  color: #4b5563;
+}
+
+.text-section h2 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid red;
+  padding-bottom: 2px;
+  width: 50%;
+}
+
+.text-section p {
+  font-size: 1.125rem;
+  text-align: left;
+  width: 70%;
+}
+
+/* Sección de Experiencia*/
+.experience-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #f3f4f6;
+  margin-top: 2rem;
+}
+.experience-text {
+  flex: 1;
+  max-width: 800px; /* Limitar el ancho máximo */
+  margin: 0 auto; /* Centrar el contenido */
+  padding: 0 20px;
+  text-align: left;
+  padding-right: 2rem;
+}
+
+.experience-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #1f2937;
+  border-bottom: 2px solid red;
+  padding-bottom: 2px;
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.experience-text p {
+  font-size: 1.125rem;
+  color: #4b5563;
+  text-align: justify;
+}
+
+.experience-image {
+  flex: 1;
+  max-width: 50%;
+  text-align: right;
+}
+
+.experience-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+}

@@ -6,6 +6,8 @@ import Carousel from "./components/Carousel";
 import Proyectos from "./components/Proyectos";
 import WhatsappButton from "./components/WhatsappButton";
 import Footer from "./components/Footer";
+import Main from "./components/Main";
+import Testimonials from "./components/Testimonials";
 
 export const metadata = {
   title: 'Vlock Constructora',
@@ -17,11 +19,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body style={{ margin: 0, padding: 0 }}>
         <Navbar />
-        <Carousel />
         {children}
         {/*<Proyectos />*/}
-        <Proyectos />
-        <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}></div>
         <WhatsappButton />
         <Footer />
       </body>
